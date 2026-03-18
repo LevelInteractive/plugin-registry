@@ -1,0 +1,21 @@
+{
+  "name": "@level/plugin-registry",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate-index": "tsx scripts/generate-index.ts",
+    "validate": "tsx scripts/validate-manifests.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "tsx": "^4.19.0",
+    "vitest": "^2.1.0",
+    "@types/node": "^20.0.0"
+  }
+}

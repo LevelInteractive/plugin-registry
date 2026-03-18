@@ -1,0 +1,41 @@
+{
+  "id": "devops-bundle",
+  "name": "DevOps Bundle",
+  "version": "1.0.0",
+  "description": "Bundle of deployment and monitoring skills plus infrastructure MCP for DevOps workflows",
+  "author": "Level Agency",
+  "license": "MIT",
+  "category": "devops",
+  "supportedClis": ["claude-code", "codex"],
+  "supportedScopes": ["user", "project"],
+  "skills": [
+    {
+      "name": "deploy",
+      "path": "skills/deploy/SKILL.md"
+    },
+    {
+      "name": "monitor",
+      "path": "skills/monitor/SKILL.md"
+    }
+  ],
+  "tools": [
+    {
+      "name": "infrastructure",
+      "config": {
+        "command": "npx",
+        "args": ["-y", "@level/infra-mcp-server"]
+      }
+    }
+  ],
+  "manifestVersion": "1.0.0",
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2026-03-17",
+      "description": "Initial release with deploy, monitor skills and infrastructure MCP",
+      "breaking": false
+    }
+  ],
+  "trustLevel": "approved",
+  "ownerBypassReview": false
+}

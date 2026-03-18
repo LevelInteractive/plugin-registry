@@ -1,0 +1,30 @@
+name: Rebuild Index
+on:
+  push:
+    branches: [main]
+    paths:
+      - "plugins/**"
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm generate-index
+      - name: Commit updated index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add registry/index.json
+          git diff --staged --quiet || git commit -m "chore: rebuild registry index"
+          git push

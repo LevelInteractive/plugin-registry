@@ -1,0 +1,29 @@
+{
+  "id": "code-review-skill",
+  "name": "Code Review Skill",
+  "version": "1.0.0",
+  "description": "AI-powered code review skill that provides structured feedback on code quality, security, and best practices",
+  "author": "Level Agency",
+  "license": "MIT",
+  "category": "code-quality",
+  "supportedClis": ["claude-code", "codex", "gemini-cli", "claude-cowork"],
+  "supportedScopes": ["user", "project"],
+  "skills": [
+    {
+      "name": "code-review",
+      "path": "skills/code-review/SKILL.md"
+    }
+  ],
+  "tools": [],
+  "manifestVersion": "1.0.0",
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2026-03-17",
+      "description": "Initial release with structured code review prompts for all supported CLIs",
+      "breaking": false
+    }
+  ],
+  "trustLevel": "approved",
+  "ownerBypassReview": false
+}
