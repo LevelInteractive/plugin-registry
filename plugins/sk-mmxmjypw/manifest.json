@@ -1,0 +1,14 @@
+{
+  "name": "Specflow: Code Review",
+  "category": "devops",
+  "useCases": [
+    "Development",
+    "Code Review"
+  ],
+  "whenToUse": "When you want to harden an application that is using SpecFlow for development.",
+  "description": "Perform systematic code reviews and generate findings that can be triaged into implementation phases.",
+  "supportedClis": [
+    "claude-code"
+  ],
+  "externalSource": "internal"
+}
